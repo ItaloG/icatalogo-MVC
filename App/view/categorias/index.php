@@ -1,0 +1,1 @@
+Esta é view de categorias
