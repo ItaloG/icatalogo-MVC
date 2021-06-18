@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/CSS/styles-global.css" />
     <link rel="stylesheet" href="/CSS/produtos.css" />
     <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/categorias.css">
 
     <title>Administrar Produtos</title>
 </head>
@@ -19,18 +20,12 @@
 
         <section class="produtos-container">
 
-            <?php
-            //verificar o $_SESSION
-            if (isset($_SESSION["usuarioId"])) {
-                //mostar os botoes somente caso o usuario esteja logado
-            ?>
+
                 <header>
                     <button onclick="javascript:window.location.href ='./novo/'">Novo Produto</button>
-                    <button onclick="javascript:window.location.href ='../categorias'">Adicionar Categoria</button>
+                    <button onclick="javascript:window.location.href ='/Categorias'">Adicionar Categoria</button>
                 </header>
-            <?php
-            }
-            ?>
+
 
             <main>
 

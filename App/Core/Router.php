@@ -15,17 +15,18 @@ class Router{
         //recuperar a url que está sendo 
         $url = $this->parseURL();
 
-        if(isset($url[1]) && file_exists("../App/Controler/" . $url[1] . ".php")){
+        if(isset($url[1]) && file_exists("../App/Controller/" . $url[1] . ".php")){
             $this->controller = $url[1];
             unset($url[1]);
 
         }elseif(empty($url[1])){
             //setamos o controler padrão da aplicação (produtos)
-            $this->controller = "produtos";
+            $this->controller = "Produtos";
         }else{
             //se nçao existir e houver um controller na url
             //exibimos página não encontrada
-            echo "Página não encontrada";
+            print_r($url);
+            $this->controller = "erro404";
         }
 
         //importamos o controlelr
@@ -37,8 +38,8 @@ class Router{
         //se houver um metodo e ele existir no controler
         //atribuimos ao atributo method
         if (isset($url[2])) {
-            if (method_exists($this->controller,$url[2])) {
-                $this->controller = $url[2];
+            if (method_exists($this->controller, $url[2])) {
+                $this->method = $url[2];
                 unset($url[2]);
                 unset($url[0]);
             }

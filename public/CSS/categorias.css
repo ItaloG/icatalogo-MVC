@@ -1,4 +1,4 @@
-.categorias-container main {
+.categorias-container {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   margin-top: 20px;
   gap: 5px;
 
-  padding-bottom: 40px;
+  padding: 40px 0px;
   background-color: var(--backgroundPrimary);
   border-radius: 6px;
   box-shadow: 0px 0px 10px var(--boxShadow);
@@ -38,13 +38,13 @@
   border-radius: 6px;
 }
 
-.card-categorias > img {
+.card-categorias  img {
   width: 20px;
 
   cursor: pointer;
   transition: 0.2s;
 }
 
-.card-categorias > img:hover {
-  transform: scale(1.1);
+.card-categorias  img:hover {
+  transform: rotate(360deg) scale(1.1);
 }

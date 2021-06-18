@@ -9,9 +9,9 @@ class Produtos extends Controller{
 
         $produtoModel = $this->Model("Produto");
 
-        $dados = $produtoModel->listarTodos();
+        $produtos = $produtoModel->listarTodos();
 
-        $this->view("produtos/index", $dados);
+        $this->view("produtos/index", $produtos);
     }
 
     //buscar pelo id
