@@ -72,7 +72,7 @@ class Categorias extends Controller
         if (count($erros) > 0) {
             $_SESSION["erros"] = $erros;
 
-            header("location: /categorias/create");
+            header("location: /categorias/edit/". $id);
 
             exit();
         }
@@ -85,7 +85,7 @@ class Categorias extends Controller
         if ($categoriaModel->atualizar()) {
             $_SESSION["mensagem"] = "Categoria atualizada com sucesso";
         } else {
-            $_SESSION["mensagem"] = "Problemas ao atualizada categoria";
+            $_SESSION["mensagem"] = "Problemas ao atualizar categoria";
         }
 
         header("location: /categorias");

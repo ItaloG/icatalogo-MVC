@@ -6,4 +6,4 @@
     CustomLog "logs/mvc.icatalogo.com.br-access.log" common
 </VirtualHost>
 
-127.0.0.1   mvc.icatalo.com.br
+127.0.0.1   mvc.icatalogo.com.br
